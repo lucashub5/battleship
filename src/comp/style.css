@@ -21,7 +21,7 @@ header {
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 145px;
+    grid-template-rows: auto auto auto 145px;
     gap: 10px;
 }
 
@@ -42,11 +42,11 @@ header {
 }
 
 .player {
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 3 / 1 / 4 / 2;
 }
 
 .enemy {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 3 / 2 / 4 / 3;
 }
 
 .locker-player, .locker-enemy {
@@ -106,7 +106,7 @@ header {
 }
 
 .text {
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     grid-column: 1 / 3;
     font-size: 15px;
 }
@@ -121,3 +121,58 @@ header {
     justify-content: end;
 }
 
+.text-player {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.text-enemy {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .main {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(6, auto);
+        justify-items: center;
+    }
+
+    .player {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    .enemy {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    .text-player {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        text-justify: center;
+    }
+    
+    .text-enemy {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+        text-justify: center;
+    }
+
+    .ships {
+        grid-row: 6 / 7;
+        grid-column: 1 / 2;
+        display: grid;
+    }
+
+    .text {
+        grid-row: 6 / 7;
+        grid-column: 1 / 2;
+    }
+
+    .timer {
+        height: 100%;
+        grid-row: 7 / 8;
+        grid-column: 1 / 2;
+    } 
+}

@@ -18,6 +18,8 @@ function initGame() {
         <button id="random">Random</button>
         <button id="restart">Restart</button>
       </div>
+      <a class=text-player>Player</a>
+      <a class=text-enemy>Enemy</a>
   </main>
   <footer>By Lucas Carovano</footer>
 `;
